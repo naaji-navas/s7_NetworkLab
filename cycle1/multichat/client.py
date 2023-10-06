@@ -40,3 +40,21 @@ receive_thread = threading.Thread(target=receive_messages)
 
 send_thread.start()
 receive_thread.start()
+
+# algorithm
+# _________
+# Import the socket and threading modules.
+# Create a new TCP socket object for the client.
+# Connect the client socket to the server's IP address (127.0.0.1) and port number (1234).
+# Define a function send_message() to send messages to the server.
+# Receive the username from the user and send it to the server.
+# Loop indefinitely to allow the user to send multiple messages.
+# Prompt the user to enter the recipient's username.
+# If the user enters "exit", send an exit message to the server and break out of the loop.
+# Prompt the user to enter the message to send to the recipient.
+# Send the message to the server in the format recipient:message.
+# Define a function receive_messages() to receive messages from the server.
+# Loop indefinitely to receive messages from the server.
+# Print the received message to the console.
+# Create two threads for sending and receiving messages.
+# Start the threads to allow the user to send and receive messages simultaneously.
