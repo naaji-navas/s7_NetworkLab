@@ -1,18 +1,12 @@
 import socket
 
 # Function to check if a number is prime
-def is_prime(n):
-    if n <= 1:
+def is_prime(num):
+    if num <= 1:
         return False
-    if n <= 3:
-        return True
-    if n % 2 == 0 or n % 3 == 0:
-        return False
-    i = 5
-    while i * i <= n:
-        if n % i == 0 or n % (i + 2) == 0:
+    for i in range(2, num//2 + 1): 
+        if num % i == 0:
             return False
-        i += 6
     return True
 
 # Create a socket object
@@ -49,4 +43,14 @@ while True:
     client_socket.close()
 
 
-##
+
+# 1. Create a socket object
+# 2. Define the server address and port
+# 3. Bind the socket to the server address and port
+# 4. Listen for incoming connections
+# 5. Accept a connection from a client
+# 6. Receive numbers from the client
+# 7. Find prime numbers among the received numbers
+# 8. Send prime numbers back to the client
+# 9. Close the client socket
+# 10. Close the server socket
